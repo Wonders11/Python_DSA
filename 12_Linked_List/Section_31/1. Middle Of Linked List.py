@@ -24,6 +24,7 @@ def middleOfLL(head):
     return temp
 
 
+# 2 pointer method (slow and fast pointer)
 def middleOfLLUsingSlowAndFast(head):
     if(head is None or head.next is None):
         return head
@@ -31,6 +32,8 @@ def middleOfLLUsingSlowAndFast(head):
     slow = head
     fast = head
 
+    # concept is as fast reaches the end of the linked list, slow will be at the middle of the linked list
+    # since the speed of fast is 2X of slow
     while fast is not None and fast.next is not None:
         slow=slow.next
         fast = fast.next.next
